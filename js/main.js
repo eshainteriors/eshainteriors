@@ -1,11 +1,25 @@
 // LIGHTBOX GALLERY
 const gallery = [
-  { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&h=800&fit=crop', title: 'Modern Living', subtitle: 'Hyderabad • ₹75,000' },
-  { img: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1200&h=800&fit=crop', title: 'Modular Kitchen', subtitle: 'Hyderabad • ₹50,000' },
-  { img: 'https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=1200&h=800&fit=crop', title: 'Bedroom Haven', subtitle: 'Hyderabad • ₹75,000' },
-  { img: 'https://images.unsplash.com/photo-1672137233327-37b0c1049e77?w=1200&h=800&fit=crop', title: 'Walk-in Wardrobe', subtitle: 'Hyderabad • ₹50,000' },
-  { img: 'https://images.unsplash.com/photo-1618220179428-22790b461013?w=1200&h=800&fit=crop', title: 'Contemporary Space', subtitle: 'Hyderabad • ₹75,000' },
-  { img: 'https://images.unsplash.com/photo-1628797285815-453c1d0d21e3?w=1200&h=800&fit=crop', title: 'Premium Kitchen', subtitle: 'Hyderabad • ₹50,000' }
+  // Living Rooms
+  { img: 'https://images.unsplash.com/photo-1646987916641-1f3c8992daa2?w=1200&h=800&fit=crop', title: 'Luxury Living Room', subtitle: 'Hyderabad • ₹75,000' },
+  { img: 'https://images.unsplash.com/photo-1720247520862-7e4b14176fa8?w=1200&h=800&fit=crop', title: 'Modern Living Space', subtitle: 'Hyderabad • ₹75,000' },
+  { img: 'https://images.unsplash.com/photo-1704040686413-2c607dbd2f06?w=1200&h=800&fit=crop', title: 'Contemporary Living', subtitle: 'Hyderabad • ₹75,000' },
+  { img: 'https://images.unsplash.com/photo-1648881806148-e5c51179c826?w=1200&h=800&fit=crop', title: 'Elegant Living Room', subtitle: 'Hyderabad • ₹75,000' },
+  // Kitchens
+  { img: 'https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?w=1200&h=800&fit=crop', title: 'Modern Kitchen Design', subtitle: 'Hyderabad • ₹50,000' },
+  { img: 'https://images.unsplash.com/photo-1639405069836-f82aa6dcb900?w=1200&h=800&fit=crop', title: 'Luxury Kitchen', subtitle: 'Hyderabad • ₹50,000' },
+  { img: 'https://images.unsplash.com/photo-1512916194211-3f2b7f5f7de3?w=1200&h=800&fit=crop', title: 'Contemporary Kitchen', subtitle: 'Hyderabad • ₹50,000' },
+  { img: 'https://images.unsplash.com/photo-1663811396777-05505d999151?w=1200&h=800&fit=crop', title: 'Modular Kitchen', subtitle: 'Hyderabad • ₹50,000' },
+  // Bedrooms
+  { img: 'https://images.unsplash.com/premium_photo-1675616563084-63d1f129623d?w=1200&h=800&fit=crop', title: 'Luxury Bedroom', subtitle: 'Hyderabad • ₹75,000' },
+  { img: 'https://images.unsplash.com/photo-1642541070065-3912f347e7c6?w=1200&h=800&fit=crop', title: 'Modern Bedroom', subtitle: 'Hyderabad • ₹75,000' },
+  { img: 'https://images.unsplash.com/photo-1696762932825-2737db830bbe?w=1200&h=800&fit=crop', title: 'Contemporary Bedroom', subtitle: 'Hyderabad • ₹75,000' },
+  { img: 'https://images.unsplash.com/photo-1699869653495-fe26f4c70b3e?w=1200&h=800&fit=crop', title: 'Elegant Bedroom Design', subtitle: 'Hyderabad • ₹75,000' },
+  // Wardrobes
+  { img: 'https://plus.unsplash.com/premium_photo-1670076515866-73822a3d610d?w=1200&h=800&fit=crop', title: 'Luxury Wardrobe', subtitle: 'Hyderabad • ₹50,000' },
+  { img: 'https://images.unsplash.com/photo-1774301211236-dab64d553241?w=1200&h=800&fit=crop', title: 'Walk-in Closet', subtitle: 'Hyderabad • ₹50,000' },
+  { img: 'https://images.unsplash.com/photo-1778731660303-1fa5ede75477?w=1200&h=800&fit=crop', title: 'Modern Wardrobe', subtitle: 'Hyderabad • ₹50,000' },
+  { img: 'https://plus.unsplash.com/premium_photo-1674815329032-421d305ad589?w=1200&h=800&fit=crop', title: 'Walk-in Wardrobe Design', subtitle: 'Hyderabad • ₹50,000' }
 ];
 let currentGalleryIndex = 0;
 
