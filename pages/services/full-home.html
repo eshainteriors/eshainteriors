@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Home Design — Esha Interiors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+<nav id="navbar">
+  <a href="../../index.html" class="logo">Esha<span>Interiors</span></a>
+  <ul class="nav-links">
+    <li><a href="../../index.html#services">Services</a></li>
+    <li><a href="../../index.html#inspiration">Projects</a></li>
+    <li><a href="../../index.html#story">About</a></li>
+    <li><a href="../../index.html#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<section style="padding: 120px 56px; background: linear-gradient(135deg, #f8f6f2 0%, #f2ece2 100%);">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="sec-tag">Full Home Design</div>
+    <h1 class="sec-title" style="margin-bottom: 24px;">Complete home <em>transformation</em></h1>
+    <p class="sec-sub" style="max-width: 700px; margin-bottom: 32px;">From living rooms to bedrooms, from kitchens to bathrooms—we design every space in your home to work together as a cohesive, beautiful whole.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 60px;">
+      <div>
+        <h2 style="font-family: var(--serif); font-size: 32px; margin-bottom: 24px; color: var(--dark);">What's <em style="color: var(--accent); font-style: italic;">included</em></h2>
+        <ul style="list-style: none; margin-bottom: 32px;">
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Initial consultation & space analysis
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            3D floor plans and renderings
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Color palette & material selection
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Lighting design & placement
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Furniture specifications & sourcing
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Project management & execution
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Post-completion support
+          </li>
+        </ul>
+      </div>
+
+      <div style="background: var(--off); padding: 40px; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,.08);">
+        <h3 style="font-family: var(--serif); font-size: 28px; margin-bottom: 24px;">Investment & Timeline</h3>
+        <div style="margin-bottom: 32px;">
+          <div style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Starting Investment</div>
+          <div style="font-family: var(--serif); font-size: 48px; font-weight: 600; color: var(--dark);">₹50,000</div>
+          <div style="font-size: 14px; color: var(--warm); margin-top: 4px;">For full home design (varies with home size & complexity)</div>
+        </div>
+
+        <div style="margin-bottom: 32px; padding-top: 32px; border-top: 1px solid var(--stone);">
+          <div style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Typical Timeline</div>
+          <div style="font-family: var(--serif); font-size: 32px; font-weight: 600; color: var(--dark);">3-6 months</div>
+          <div style="font-size: 14px; color: var(--warm); margin-top: 4px;">Design phase to completion</div>
+        </div>
+
+        <button class="btn-p" onclick="openModal('home')" style="width: 100%; padding: 16px; border: none; cursor: pointer; font-size: 14px;">Book Your Free Consultation</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 80px 56px; background: white;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-family: var(--serif); font-size: 40px; margin-bottom: 40px; text-align: center;">The Design <em style="color: var(--accent); font-style: italic;">Process</em></h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;">
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; margin: 0 auto 24px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 32px; font-weight: 600;">1</div>
+        <h3 style="font-size: 18px; margin-bottom: 12px;">Consultation</h3>
+        <p style="font-size: 14px; color: var(--warm); line-height: 1.6;">We listen to your vision, understand your lifestyle, and assess your space.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; margin: 0 auto 24px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 32px; font-weight: 600;">2</div>
+        <h3 style="font-size: 18px; margin-bottom: 12px;">Concept Design</h3>
+        <p style="font-size: 14px; color: var(--warm); line-height: 1.6;">We create initial design concepts with mood boards and layout options.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; margin: 0 auto 24px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 32px; font-weight: 600;">3</div>
+        <h3 style="font-size: 18px; margin-bottom: 12px;">3D Rendering</h3>
+        <p style="font-size: 14px; color: var(--warm); line-height: 1.6;">Detailed 3D visualizations to help you see the final result before execution.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; margin: 0 auto 24px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 32px; font-weight: 600;">4</div>
+        <h3 style="font-size: 18px; margin-bottom: 12px;">Material Selection</h3>
+        <p style="font-size: 14px; color: var(--warm); line-height: 1.6;">Together we choose materials, finishes, and furniture that fit your budget.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; margin: 0 auto 24px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 32px; font-weight: 600;">5</div>
+        <h3 style="font-size: 18px; margin-bottom: 12px;">Execution</h3>
+        <p style="font-size: 14px; color: var(--warm); line-height: 1.6;">We manage the entire project—from purchases to installation to final touches.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 80px; height: 80px; margin: 0 auto 24px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 32px; font-weight: 600;">6</div>
+        <h3 style="font-size: 18px; margin-bottom: 12px;">Handover</h3>
+        <p style="font-size: 14px; color: var(--warm); line-height: 1.6;">Move into your new home and enjoy the transformation. We're here for support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--off); padding: 80px 56px; text-align: center;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 class="sec-title" style="margin-bottom: 24px;">Ready to get <em>started</em>?</h2>
+    <p class="sec-sub" style="margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">Schedule your free consultation today and discover how we can transform your home.</p>
+    <button class="btn-p" onclick="openModal('home')">Book Free Consultation →</button>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a href="../../index.html" class="logo">Esha<span>Interiors</span></a>
+      <p>Creating beautiful, functional spaces that tell your story.</p>
+    </div>
+  </div>
+  <div class="fb-bot">
+    <div class="fb-copy">© 2024 Esha Interiors. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-ttl">Book a Consultation</div>
+    <div class="modal-sub" id="msub">Tell us about your space — we'll make it beautiful.</div>
+    <div class="mform">
+      <div class="fr">
+        <div class="ff"><label>Name</label><input type="text" id="modal-name" placeholder="Your Name"></div>
+        <div class="ff"><label>Phone</label><input type="tel" id="modal-phone" placeholder="+91 98765 43210"></div>
+      </div>
+      <div class="ff"><label>Email</label><input type="email" id="modal-email" placeholder="your@email.com"></div>
+      <div class="ff">
+        <label>Service</label>
+        <select id="msel">
+          <option value="">Select a service...</option>
+          <option>Full Home Design</option>
+          <option>Kitchen Interiors</option>
+          <option>Wardrobe Design</option>
+        </select>
+      </div>
+      <div class="ff"><label>City</label><input type="text" id="modal-city" placeholder="Hyderabad"></div>
+      <div class="ff"><label>Your Vision</label><textarea id="modal-vision" rows="3" placeholder="Tell us about your space..."></textarea></div>
+      <button class="msub" onclick="submitModal(this)">Send Request →</button>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

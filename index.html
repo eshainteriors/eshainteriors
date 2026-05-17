@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esha Interiors — Design for Every Dream</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- FLOAT CTA -->
+<button class="float-cta" id="floatCta" onclick="openModal('hero')">Book Consultation</button>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <button class="lightbox-prev" onclick="prevLightbox()">❮</button>
+    <button class="lightbox-next" onclick="nextLightbox()">❯</button>
+    <div class="lightbox-info">
+      <div class="lightbox-title" id="lightboxTitle"></div>
+      <div class="lightbox-subtitle" id="lightboxSubtitle"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-ttl">Book a Consultation</div>
+    <div class="modal-sub" id="msub">Tell us about your space — we'll make it beautiful.</div>
+    <div class="mform">
+      <div class="fr">
+        <div class="ff"><label>Name</label><input type="text" id="modal-name" placeholder="Priya Sharma"></div>
+        <div class="ff"><label>Phone</label><input type="tel" id="modal-phone" placeholder="+91 98765 43210"></div>
+      </div>
+      <div class="ff"><label>Email</label><input type="email" id="modal-email" placeholder="priya@email.com"></div>
+      <div class="ff">
+        <label>Service</label>
+        <select id="msel">
+          <option value="">Select a service...</option>
+          <option>Full Home Design</option>
+          <option>Kitchen Interiors</option>
+          <option>Wardrobe Design</option>
+          <option>Room Makeover</option>
+          <option>Space Planning</option>
+          <option>Design Consultation</option>
+        </select>
+      </div>
+      <div class="fr">
+        <div class="ff"><label>Budget</label>
+          <select id="modal-budget"><option>Under ₹10,000</option><option>₹10K – ₹30K</option><option>₹30K – ₹75K</option><option>₹75K – ₹1.5L</option><option>Above ₹1.5L</option></select>
+        </div>
+        <div class="ff"><label>City</label><input type="text" id="modal-city" placeholder="Hyderabad"></div>
+      </div>
+      <div class="ff"><label>Your Vision</label><textarea id="modal-vision" rows="3" placeholder="Tell us about your space..."></textarea></div>
+      <button class="msub" onclick="submitModal(this)">Send Request →</button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="logo">Esha<span>Interiors</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#inspiration">Projects</a></li>
+    <li><a href="#story">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#" class="nav-cta" onclick="openModal('hero');return false">Book Free Consultation</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO CAROUSEL -->
+<section id="hero">
+  <!-- BACKGROUND IMAGE CAROUSEL -->
+  <div class="hero-bg-carousel" id="bgCarousel">
+    <div class="hero-bg-slide active">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&h=900&fit=crop" alt="Modern Living Space">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="hero-bg-slide">
+      <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=1600&h=900&fit=crop" alt="Modern Kitchen Interior">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="hero-bg-slide">
+      <img src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=1600&h=900&fit=crop" alt="Elegant Bedroom Space">
+      <div class="slide-overlay"></div>
+    </div>
+  </div>
+
+  <!-- STATIC CONTENT (Always Visible) -->
+  <div class="hero-content-wrapper">
+    <div class="slide-content active">
+      <div class="slide-tag">Interior Design</div>
+      <h1>Transform your <em>space</em></h1>
+      <p>Beautiful, functional interiors designed for how you live. From concept to completion, we create spaces that inspire every day.</p>
+      <div class="slide-btns">
+        <button class="btn-p" onclick="openModal('home')">Book Consultation</button>
+        <a href="#services" class="btn-s">View Services →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION CONTROLS -->
+  <div class="carousel-nav">
+    <span class="dot active" onclick="nextSlide(-2)"></span>
+    <span class="dot" onclick="nextSlide(0)"></span>
+    <span class="dot" onclick="nextSlide(1)"></span>
+  </div>
+  <div class="carousel-arrows">
+    <button class="arr-btn" onclick="nextSlide(-1)">←</button>
+    <button class="arr-btn" onclick="nextSlide(1)">→</button>
+  </div>
+  <div class="scroll-line-wrap">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="svc-hd">
+    <div>
+      <div class="sec-tag">What We Create</div>
+      <h2 class="sec-title">Our <em>specialities</em></h2>
+    </div>
+    <p class="sec-sub">Every service is designed around your life, your budget, and your vision.</p>
+  </div>
+  <div class="svc-grid">
+
+    <!-- Full Home Design -->
+    <div class="svc-card reveal" onclick="openModal('home')">
+      <div class="svc-img">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=500&h=400&fit=crop" alt="Full Home Design">
+        <div class="svc-pill">Most Popular</div>
+        <div class="svc-badge">From ₹50K</div>
+      </div>
+      <div class="svc-body">
+        <div class="svc-title">Full Home Design</div>
+        <p class="svc-desc">A complete home transformation from concept to completion. Every room designed to feel cohesive, personal, and timeless.</p>
+        <div class="svc-feats">
+          <span class="svc-feat">Living Room</span><span class="svc-feat">Bedroom</span><span class="svc-feat">Dining</span><span class="svc-feat">Bathrooms</span><span class="svc-feat">3D Renders</span>
+        </div>
+        <div class="svc-foot">
+          <div class="svc-price">From ₹50,000 <small>/ full home</small></div>
+          <button class="svc-btn" onclick="openModal('home');event.stopPropagation()">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kitchen -->
+    <div class="svc-card reveal" onclick="openModal('kitchen')">
+      <div class="svc-img">
+        <img src="https://images.unsplash.com/photo-1628797285815-453c1d0d21e3?w=500&h=400&fit=crop" alt="Kitchen Interiors">
+        <div class="svc-pill">Kitchen</div>
+        <div class="svc-badge">From ₹40K</div>
+      </div>
+      <div class="svc-body">
+        <div class="svc-title">Kitchen Interiors</div>
+        <p class="svc-desc">Modular kitchens designed around how you cook. Smart storage, durable finishes, and layouts that make every meal enjoyable.</p>
+        <div class="svc-feats">
+          <span class="svc-feat">Modular</span><span class="svc-feat">L / U / Straight</span><span class="svc-feat">Island</span><span class="svc-feat">Backsplash</span>
+        </div>
+        <div class="svc-foot">
+          <div class="svc-price">From ₹40,000 <small>/ kitchen</small></div>
+          <button class="svc-btn" onclick="openModal('kitchen');event.stopPropagation()">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wardrobe -->
+    <div class="svc-card reveal" onclick="openModal('wardrobe')">
+      <div class="svc-img">
+        <img src="https://images.unsplash.com/photo-1672137233327-37b0c1049e77?w=500&h=400&fit=crop" alt="Wardrobe Design">
+        <div class="svc-pill">Wardrobe</div>
+        <div class="svc-badge">From ₹20K</div>
+      </div>
+      <div class="svc-body">
+        <div class="svc-title">Wardrobe Design</div>
+        <p class="svc-desc">Walk-in wardrobes and bedroom storage solutions that maximize space and minimize clutter. Beauty meets function.</p>
+        <div class="svc-feats">
+          <span class="svc-feat">Walk-in</span><span class="svc-feat">Modular</span><span class="svc-feat">Sliding Doors</span><span class="svc-feat">Lighting</span>
+        </div>
+        <div class="svc-foot">
+          <div class="svc-price">From ₹20,000 <small>/ wardrobe</small></div>
+          <button class="svc-btn" onclick="openModal('wardrobe');event.stopPropagation()">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSPIRATION -->
+<section id="inspiration">
+  <div class="insp-hd">
+    <div>
+      <div class="sec-tag">Gallery</div>
+      <h2 class="sec-title">Our <em>latest projects</em></h2>
+    </div>
+    <div class="insp-filter">
+      <button class="fil-btn active" onclick="filterProjects('all')">All</button>
+      <button class="fil-btn" onclick="filterProjects('living')">Living Room</button>
+      <button class="fil-btn" onclick="filterProjects('kitchen')">Kitchen</button>
+      <button class="fil-btn" onclick="filterProjects('bedroom')">Bedroom</button>
+      <button class="fil-btn" onclick="filterProjects('wardrobe')">Wardrobe</button>
+    </div>
+  </div>
+  <div class="insp-grid" id="projects-grid">
+    <div class="insp-item" data-category="living" onclick="openLightbox(0)">
+      <div class="insp-inner">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=500&fit=crop" alt="Modern Living Room">
+      </div>
+      <div class="insp-over">
+        <div class="insp-ot">Modern Living</div>
+        <div class="insp-os">Hyderabad • ₹2,50,000</div>
+      </div>
+      <div class="insp-tag">Living Room</div>
+    </div>
+
+    <div class="insp-item" data-category="kitchen" onclick="openLightbox(1)">
+      <div class="insp-inner">
+        <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=600&h=500&fit=crop" alt="Modular Kitchen Design">
+      </div>
+      <div class="insp-over">
+        <div class="insp-ot">Modular Kitchen</div>
+        <div class="insp-os">Hyderabad • ₹1,80,000</div>
+      </div>
+      <div class="insp-tag">Kitchen</div>
+    </div>
+
+    <div class="insp-item" data-category="bedroom" onclick="openLightbox(2)">
+      <div class="insp-inner">
+        <img src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&h=500&fit=crop" alt="Bedroom Design">
+      </div>
+      <div class="insp-over">
+        <div class="insp-ot">Bedroom Haven</div>
+        <div class="insp-os">Chennai • ₹1,50,000</div>
+      </div>
+      <div class="insp-tag">Bedroom</div>
+    </div>
+
+    <div class="insp-item" data-category="wardrobe" onclick="openLightbox(3)">
+      <div class="insp-inner">
+        <img src="https://images.unsplash.com/photo-1672137233327-37b0c1049e77?w=600&h=500&fit=crop" alt="Walk-in Wardrobe">
+      </div>
+      <div class="insp-over">
+        <div class="insp-ot">Walk-in Wardrobe</div>
+        <div class="insp-os">Hyderabad • ₹95,000</div>
+      </div>
+      <div class="insp-tag">Wardrobe</div>
+    </div>
+
+    <div class="insp-item" data-category="living" onclick="openLightbox(4)">
+      <div class="insp-inner">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&h=500&fit=crop" alt="Contemporary Living Space">
+      </div>
+      <div class="insp-over">
+        <div class="insp-ot">Contemporary Space</div>
+        <div class="insp-os">Hyderabad • ₹2,00,000</div>
+      </div>
+      <div class="insp-tag">Living Room</div>
+    </div>
+
+    <div class="insp-item" data-category="kitchen" onclick="openLightbox(5)">
+      <div class="insp-inner">
+        <img src="https://images.unsplash.com/photo-1628797285815-453c1d0d21e3?w=600&h=500&fit=crop" alt="Premium Kitchen Interior">
+      </div>
+      <div class="insp-over">
+        <div class="insp-ot">Premium Kitchen</div>
+        <div class="insp-os">Pune • ₹2,20,000</div>
+      </div>
+      <div class="insp-tag">Kitchen</div>
+    </div>
+  </div>
+  <div class="insp-more">
+    <a href="pages/portfolio.html" class="btn-p">View All Projects →</a>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-vis">
+    <div class="story-big">
+      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=600&h=500&fit=crop" alt="Our Story">
+    </div>
+    <div class="story-sm">
+      <img src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=500&h=350&fit=crop" alt="Design Process">
+    </div>
+    <div class="story-bdg">
+      <div class="story-bdg-n">8+</div>
+      <div class="story-bdg-t">Years</div>
+    </div>
+    <div class="story-q">
+      <p>"Great design is invisible. It works so well that you don't notice it—you just feel better."</p>
+      <cite>— Esha, Founder</cite>
+    </div>
+  </div>
+  <div>
+    <div class="sec-tag">Our Story</div>
+    <h2 class="sec-title">From spaces to <em>sanctuaries</em></h2>
+    <p class="sec-sub">We believe every home has a story. Since 2016, we've been helping Indian families and businesses tell theirs through thoughtful, beautiful design. Starting with a single apartment project, we've grown to design over 200 homes across India.</p>
+    <p class="sec-sub" style="margin-top: 18px;">Our philosophy is simple: Listen, Design, Transform. We listen to your dreams, design around your lifestyle, and transform spaces into places you never want to leave.</p>
+    <div class="story-stats">
+      <div class="story-stat">
+        <div class="story-stat-n">200+</div>
+        <div class="story-stat-l">Homes Designed</div>
+      </div>
+      <div class="story-stat">
+        <div class="story-stat-n">8+</div>
+        <div class="story-stat-l">Years Experience</div>
+      </div>
+      <div class="story-stat">
+        <div class="story-stat-n">∞</div>
+        <div class="story-stat-l">Any Budget Welcome</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="test-hd">
+    <div class="sec-tag">What Clients Say</div>
+    <h2 class="sec-title">Stories of <em>transformation</em></h2>
+  </div>
+  <div class="test-track" id="testimonial-track">
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-txt">"The attention to detail is incredible. Esha understood my vision and brought it to life in ways I hadn't even imagined."</p>
+      <div class="test-auth">
+        <div class="test-av">AS</div>
+        <div>
+          <div class="test-name">Amrita Singh</div>
+          <div class="test-loc">Hyderabad</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-txt">"From consultation to completion, the process was smooth and professional. My kitchen is now the heart of my home."</p>
+      <div class="test-auth">
+        <div class="test-av">RG</div>
+        <div>
+          <div class="test-name">Rajesh Gupta</div>
+          <div class="test-loc">Hyderabad</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-txt">"Worth every rupee spent. The design makes the space feel so much larger and brighter. Highly recommend Esha Interiors!"</p>
+      <div class="test-auth">
+        <div class="test-av">PM</div>
+        <div>
+          <div class="test-name">Priya Mishra</div>
+          <div class="test-loc">Hyderabad</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-txt">"Our apartment feels like a magazine spread now. The team was patient, creative, and delivered everything on time."</p>
+      <div class="test-auth">
+        <div class="test-av">VK</div>
+        <div>
+          <div class="test-name">Vivek Kapoor</div>
+          <div class="test-loc">Hyderabad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="test-nav">
+    <span class="test-dot active" onclick="moveTestimonials(-3)"></span>
+    <span class="test-dot" onclick="moveTestimonials(0)"></span>
+    <span class="test-dot" onclick="moveTestimonials(3)"></span>
+    <span class="test-dot" onclick="moveTestimonials(6)"></span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div>
+    <div class="sec-tag">Get In Touch</div>
+    <h2 class="sec-title">Let's create your <em>dream space</em></h2>
+    <p class="sec-sub">Have a question? Want to discuss your space? Reach out—we'd love to hear from you.</p>
+    <div class="contact-info">
+      <div class="ci">
+        <div class="ci-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="ci-lbl">Email</div>
+          <div class="ci-val">hello@eshainteriors.com</div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="ci-lbl">Phone / WhatsApp</div>
+          <div class="ci-val">+91 98765 43210</div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <div>
+          <div class="ci-lbl">Location</div>
+          <div class="ci-val">Hyderabad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cform">
+    <div class="cform-ttl">Send us a message</div>
+    <div class="cform-sub">We'll get back to you within 24 hours.</div>
+    <form class="fr" id="contact-form" onsubmit="handleContactForm(event)">
+      <div class="ff"><label>Name</label><input type="text" id="cf-name" required placeholder="Priya Sharma"></div>
+      <div class="ff"><label>Phone</label><input type="tel" id="cf-phone" required placeholder="+91 98765 43210"></div>
+    </form>
+    <div class="ff"><label>Email</label><input type="email" id="cf-email" form="contact-form" required placeholder="priya@email.com"></div>
+    <div class="ff"><label>Subject</label><select id="cf-subject" form="contact-form"><option>General Inquiry</option><option>Service Question</option><option>Project Discussion</option><option>Other</option></select></div>
+    <div class="ff"><label>Message</label><textarea id="cf-message" form="contact-form" rows="4" required placeholder="Tell us how we can help..."></textarea></div>
+    <button type="submit" class="form-sub" form="contact-form">Send Message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a href="#hero" class="logo">Esha<span>Interiors</span></a>
+      <p>Creating beautiful, functional spaces that tell your story. From concept to completion, we transform homes into dreams.</p>
+      <div class="fsoc">
+        <a href="https://instagram.com/eshainteriors" target="_blank" rel="noopener" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1.5"></circle></svg>
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" title="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </a>
+        <a href="https://youtube.com/eshainteriors" target="_blank" rel="noopener" title="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.25z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="pages/services/full-home.html">Full Home Design</a></li>
+        <li><a href="pages/services/kitchen.html">Kitchen Interiors</a></li>
+        <li><a href="pages/services/wardrobe.html">Wardrobe Design</a></li>
+        <li><a href="pages/services/renovation.html">Space Planning</a></li>
+        <li><a href="pages/services/consultation.html">Design Consultation</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/portfolio.html">Portfolio</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Location</h4>
+      <ul>
+        <li><a href="#contact">Hyderabad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fb-bot">
+    <div class="fb-copy">© 2024 Esha Interiors. All rights reserved.</div>
+    <div class="fb-legal">
+      <a href="pages/privacy.html">Privacy Policy</a>
+      <a href="pages/terms.html">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/supabase-client.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

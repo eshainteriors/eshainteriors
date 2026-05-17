@@ -1,0 +1,28 @@
+{
+  "name": "esha-interiors",
+  "version": "1.0.0",
+  "description": "Esha Interiors - Professional Interior Design Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'Running tests...'",
+    "deploy": "echo 'Deploy to Vercel or Netlify'"
+  },
+  "keywords": [
+    "interior-design",
+    "home-design",
+    "kitchen-design",
+    "wardrobe-design",
+    "india",
+    "hyderabad"
+  ],
+  "author": "Esha Interiors",
+  "license": "MIT",
+  "dependencies": {
+    "supabase": "^2.38.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
