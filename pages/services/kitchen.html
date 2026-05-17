@@ -16,6 +16,7 @@
     <li><a href="../../index.html#story">About</a></li>
     <li><a href="../../index.html#contact">Contact</a></li>
   </ul>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
 <section style="padding: 120px 56px; background: linear-gradient(135deg, #f8f6f2 0%, #f2ece2 100%); text-align: center;">
@@ -23,7 +24,108 @@
     <div class="sec-tag" style="justify-content: center;">Kitchen Interiors</div>
     <h1 class="sec-title" style="margin-bottom: 24px;">The heart of your <em>home</em></h1>
     <p class="sec-sub" style="max-width: 700px; margin: 0 auto 32px;">Modular kitchens designed around how you cook. Smart storage, durable finishes, and layouts that make every meal enjoyable.</p>
-    <button class="btn-p" onclick="document.getElementById('modal').classList.add('open')">Book Consultation →</button>
+    <button class="btn-p" onclick="openModal('kitchen')">Book Consultation →</button>
+  </div>
+</section>
+
+<section style="padding: 80px 56px; background: white;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+      <div>
+        <h2 style="font-family: var(--serif); font-size: 32px; margin-bottom: 24px; color: var(--dark);">Why Choose Our <em style="color: var(--accent); font-style: italic;">Kitchen Design</em></h2>
+        <ul style="list-style: none; margin-bottom: 32px;">
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Modular & customizable layouts
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Smart storage solutions
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Premium materials & finishes
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Integrated appliances
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Ergonomic work triangles
+          </li>
+          <li style="margin-bottom: 16px; padding-left: 28px; position: relative; font-size: 16px;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+            Warranty & after-sales support
+          </li>
+        </ul>
+      </div>
+
+      <div style="background: var(--off); padding: 40px; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,.08);">
+        <h3 style="font-family: var(--serif); font-size: 28px; margin-bottom: 24px;">Investment & Timeline</h3>
+        <div style="margin-bottom: 32px;">
+          <div style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Starting Investment</div>
+          <div style="font-family: var(--serif); font-size: 48px; font-weight: 600; color: var(--dark);">₹50,000</div>
+          <div style="font-size: 14px; color: var(--warm); margin-top: 4px;">For complete kitchen interiors</div>
+        </div>
+
+        <div style="margin-bottom: 32px; padding-top: 32px; border-top: 1px solid var(--stone);">
+          <div style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Typical Timeline</div>
+          <div style="font-family: var(--serif); font-size: 32px; font-weight: 600; color: var(--dark);">2-3 months</div>
+          <div style="font-size: 14px; color: var(--warm); margin-top: 4px;">Design to installation</div>
+        </div>
+
+        <button class="btn-p" onclick="openModal('kitchen')" style="width: 100%; padding: 16px; border: none; cursor: pointer; font-size: 14px;">Book Your Free Consultation</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 80px 56px; background: white;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-family: var(--serif); font-size: 40px; margin-bottom: 40px; text-align: center;">Our Kitchen Design <em style="color: var(--accent); font-style: italic;">Gallery</em></h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+      <div style="border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform .3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?w=600&h=400&fit=crop" alt="Modern Kitchen Design" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="padding: 20px; background: white;">
+          <h3 style="font-size: 18px; margin-bottom: 8px;">Modern Kitchen</h3>
+          <p style="font-size: 13px; color: var(--warm);">Clean lines and contemporary design with state-of-the-art appliances.</p>
+        </div>
+      </div>
+
+      <div style="border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform .3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1639405069836-f82aa6dcb900?w=600&h=400&fit=crop" alt="Luxury Kitchen Design" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="padding: 20px; background: white;">
+          <h3 style="font-size: 18px; margin-bottom: 8px;">Luxury Kitchen</h3>
+          <p style="font-size: 13px; color: var(--warm);">Premium finishes and high-end materials for a sophisticated space.</p>
+        </div>
+      </div>
+
+      <div style="border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform .3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1512916194211-3f2b7f5f7de3?w=600&h=400&fit=crop" alt="Contemporary Kitchen Design" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="padding: 20px; background: white;">
+          <h3 style="font-size: 18px; margin-bottom: 8px;">Contemporary Kitchen</h3>
+          <p style="font-size: 13px; color: var(--warm);">Sleek design with functional smart storage and minimalist aesthetics.</p>
+        </div>
+      </div>
+
+      <div style="border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform .3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <img src="https://images.unsplash.com/photo-1663811396777-05505d999151?w=600&h=400&fit=crop" alt="Modular Kitchen Design" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div style="padding: 20px; background: white;">
+          <h3 style="font-size: 18px; margin-bottom: 8px;">Modular Kitchen</h3>
+          <p style="font-size: 13px; color: var(--warm);">Flexible layouts with integrated appliances and maximum functionality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--off); padding: 80px 56px; text-align: center;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <h2 class="sec-title" style="margin-bottom: 24px;">Ready to design your <em>dream kitchen</em>?</h2>
+    <p class="sec-sub" style="margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">Let's create a kitchen that's as beautiful as it is functional.</p>
+    <button class="btn-p" onclick="openModal('kitchen')">Book Free Consultation →</button>
   </div>
 </section>
 
@@ -38,6 +140,43 @@
     <div class="fb-copy">© 2024 Esha Interiors. All rights reserved.</div>
   </div>
 </footer>
+
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-ttl">Book a Consultation</div>
+    <div class="modal-sub" id="msub">Tell us about your space — we'll make it beautiful.</div>
+    <div class="mform">
+      <div class="fr">
+        <div class="ff"><label>Name</label><input type="text" id="modal-name" placeholder="Your Name"></div>
+        <div class="ff"><label>Phone</label><input type="tel" id="modal-phone" placeholder="+91 98765 43210"></div>
+      </div>
+      <div class="ff"><label>Email</label><input type="email" id="modal-email" placeholder="your@email.com"></div>
+      <div class="ff">
+        <label>Service</label>
+        <select id="msel">
+          <option value="">Select a service...</option>
+          <option>Full Home Design</option>
+          <option>Kitchen Interiors</option>
+          <option>Wardrobe Design</option>
+          <option>Living Room Design</option>
+        </select>
+      </div>
+      <div class="ff"><label>City</label><input type="text" id="modal-city" placeholder="Hyderabad"></div>
+      <div class="ff"><label>Budget</label>
+        <select id="modal-budget">
+          <option>Under ₹10,000</option>
+          <option>₹10,000 - ₹25,000</option>
+          <option>₹25,000 - ₹50,000</option>
+          <option>Above ₹50,000</option>
+        </select>
+      </div>
+      <div class="ff"><label>Your Vision</label><textarea id="modal-vision" rows="3" placeholder="Tell us about your space..."></textarea></div>
+      <button class="msub" onclick="submitModal(this)">Send Request →</button>
+    </div>
+  </div>
+</div>
+
 <script src="../../js/main.js"></script>
 </body>
 </html>
