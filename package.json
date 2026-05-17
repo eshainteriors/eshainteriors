@@ -20,6 +20,7 @@
   "author": "Esha Interiors",
   "license": "MIT",
   "dependencies": {
+    "@supabase/supabase-js": "^2.105.4",
     "supabase": "^2.38.0"
   },
   "devDependencies": {
