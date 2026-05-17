@@ -1,7 +1,6 @@
 // Supabase Configuration
-// Replace these with your Supabase project credentials
-const SUPABASE_URL = 'https://your-project.supabase.co';
-const SUPABASE_ANON_KEY = 'your-anon-key';
+const SUPABASE_URL = 'https://ftndifzxnqwlotblgnpq.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0bmRpZnp4bnF3bG90YmxnbnBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1ODYxMzMsImV4cCI6MjA5MjE2MjEzM30.tVmk32SyIR7zul8SfZv_2DUtxLK0m8kbNEmjgKHp6io';
 
 // Initialize Supabase (optional - used for direct client-side operations)
 // For production, we recommend using Edge Functions for secure form submissions
