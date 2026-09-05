@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav id="navbar">
-  <a href="../index.html" class="logo">Esha<span>Interiors</span></a>
+  <a href="../index.html" class="logo"><img src="../eshalogo.png" alt="Esha Interiors" style="height: 40px;"></a>
   <ul class="nav-links">
     <li><a href="../index.html#services">Services</a></li>
     <li><a href="../index.html#inspiration">Projects</a></li>
@@ -48,7 +48,7 @@
       <div style="padding: 20px; background: white;">
         <h3 style="font-size: 20px; margin-bottom: 10px;">Modern Living Room</h3>
         <p style="font-size: 14px; color: #9e9488; margin-bottom: 16px;">Complete living room redesign with custom furniture, accent wall, and ambient lighting.</p>
-        <a href="#contact" onclick="openModal('hero')" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
+        <a href="#" onclick="openModal('hero'); return false;" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
       </div>
     </div>
 
@@ -65,7 +65,7 @@
       <div style="padding: 20px; background: white;">
         <h3 style="font-size: 20px; margin-bottom: 10px;">Modular Kitchen</h3>
         <p style="font-size: 14px; color: #9e9488; margin-bottom: 16px;">L-shaped kitchen with marble countertops, 9ft ceiling units, and smart storage solutions.</p>
-        <a href="#contact" onclick="openModal('kitchen')" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
+        <a href="#" onclick="openModal('kitchen'); return false;" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
       </div>
     </div>
 
@@ -82,7 +82,7 @@
       <div style="padding: 20px; background: white;">
         <h3 style="font-size: 20px; margin-bottom: 10px;">Master Bedroom</h3>
         <p style="font-size: 14px; color: #9e9488; margin-bottom: 16px;">Contemporary bedroom with upholstered headboard, hanging lights, and luxury bedding.</p>
-        <a href="#contact" onclick="openModal('hero')" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
+        <a href="#" onclick="openModal('hero'); return false;" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
       </div>
     </div>
 
@@ -99,7 +99,7 @@
       <div style="padding: 20px; background: white;">
         <h3 style="font-size: 20px; margin-bottom: 10px;">Walk-in Wardrobe</h3>
         <p style="font-size: 14px; color: #9e9488; margin-bottom: 16px;">Luxurious walk-in wardrobe with dual-sided shelving, mirrors, and jewelry storage.</p>
-        <a href="#contact" onclick="openModal('wardrobe')" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
+        <a href="#" onclick="openModal('wardrobe'); return false;" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
       </div>
     </div>
 
@@ -116,7 +116,7 @@
       <div style="padding: 20px; background: white;">
         <h3 style="font-size: 20px; margin-bottom: 10px;">Modern Living Space</h3>
         <p style="font-size: 14px; color: #9e9488; margin-bottom: 16px;">Open-plan living with minimal aesthetic, statement furniture, and natural lighting.</p>
-        <a href="#contact" onclick="openModal('hero')" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
+        <a href="#" onclick="openModal('hero'); return false;" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
       </div>
     </div>
 
@@ -133,7 +133,7 @@
       <div style="padding: 20px; background: white;">
         <h3 style="font-size: 20px; margin-bottom: 10px;">Premium Kitchen Design</h3>
         <p style="font-size: 14px; color: #9e9488; margin-bottom: 16px;">Island kitchen with integrated appliances, quartz counters, and smart storage.</p>
-        <a href="#contact" onclick="openModal('kitchen')" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
+        <a href="#" onclick="openModal('kitchen'); return false;" class="btn-p" style="display: inline-block; padding: 10px 18px; font-size: 11px;">Book Consultation</a>
       </div>
     </div>
   </div>
@@ -148,7 +148,7 @@
 <footer>
   <div class="ft">
     <div class="fb">
-      <a href="../index.html" class="logo">Esha<span>Interiors</span></a>
+      <a href="../index.html" class="logo"><img src="../eshalogo.png" alt="Esha Interiors" style="height: 40px;"></a>
       <p>Creating beautiful, functional spaces that tell your story.</p>
     </div>
   </div>
@@ -156,6 +156,46 @@
     <div class="fb-copy">© 2024 Esha Interiors. All rights reserved.</div>
   </div>
 </footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-ttl">Book a Consultation</div>
+    <div class="modal-sub" id="msub">Tell us about your space — we'll make it beautiful.</div>
+    <div class="mform">
+      <div class="fr">
+        <div class="ff"><label>Name</label><input type="text" id="modal-name" placeholder="Your Name"></div>
+        <div class="ff"><label>Phone</label><input type="tel" id="modal-phone" placeholder="+91 8341032928"></div>
+      </div>
+      <div class="ff"><label>Email</label><input type="email" id="modal-email" placeholder="your@email.com"></div>
+      <div class="ff">
+        <label>Service</label>
+        <select id="msel">
+          <option value="">Select a service...</option>
+          <option>Full Home Design</option>
+          <option>Kitchen Interiors</option>
+          <option>Wardrobe Design</option>
+          <option>Living Room Design</option>
+        </select>
+      </div>
+      <div class="fr">
+        <div class="ff"><label>Budget</label>
+          <select id="modal-budget">
+            <option>Under ₹10,000</option>
+            <option>₹10K – ₹30K</option>
+            <option>₹30K – ₹75K</option>
+            <option>₹75K – ₹1.5L</option>
+            <option>Above ₹1.5L</option>
+          </select>
+        </div>
+        <div class="ff"><label>City</label><input type="text" id="modal-city" placeholder="Hyderabad"></div>
+      </div>
+      <div class="ff"><label>Your Vision</label><textarea id="modal-vision" rows="3" placeholder="Tell us about your space..."></textarea></div>
+      <button class="msub" onclick="submitModal(this)">Send Request →</button>
+    </div>
+  </div>
+</div>
 
 <script src="../js/main.js"></script>
 </body>
