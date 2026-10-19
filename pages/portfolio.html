@@ -27,11 +27,11 @@
   </div>
 
   <div class="insp-filter" style="justify-content: center; margin-bottom: 60px;">
-    <button class="fil-btn active" onclick="filterProjects('all')">All</button>
-    <button class="fil-btn" onclick="filterProjects('living')">Living Room</button>
-    <button class="fil-btn" onclick="filterProjects('kitchen')">Kitchen</button>
-    <button class="fil-btn" onclick="filterProjects('bedroom')">Bedroom</button>
-    <button class="fil-btn" onclick="filterProjects('wardrobe')">Wardrobe</button>
+    <button class="fil-btn active" onclick="filterProjects('all', this)">All</button>
+    <button class="fil-btn" onclick="filterProjects('living', this)">Living Room</button>
+    <button class="fil-btn" onclick="filterProjects('kitchen', this)">Kitchen</button>
+    <button class="fil-btn" onclick="filterProjects('bedroom', this)">Bedroom</button>
+    <button class="fil-btn" onclick="filterProjects('wardrobe', this)">Wardrobe</button>
   </div>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;">
@@ -142,7 +142,7 @@
 <section style="background: var(--off); padding: 80px 56px; text-align: center;">
   <h2 class="sec-title" style="margin-bottom: 24px;">Ready to transform your space?</h2>
   <p class="sec-sub" style="margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">Let's discuss your project and create something beautiful together.</p>
-  <a href="../index.html" class="btn-p">Back to Home →</a>
+  <button class="btn-p" onclick="openModal('hero')">Book Free Consultation →</button>
 </section>
 
 <footer>
