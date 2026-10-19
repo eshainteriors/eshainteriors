@@ -22,15 +22,17 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
 # Cache configuration
+# CSS/JS filenames are not fingerprinted, so they must be revalidated on every
+# visit; the ?v= query on each <link>/<script> also busts CDN caches on deploy.
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*.woff2"
